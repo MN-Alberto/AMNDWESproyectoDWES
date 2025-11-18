@@ -20,7 +20,6 @@
             margin: 0;
         }
         main {
-            max-width: 1000px;
             margin: 30px auto;
             padding: 20px;
             background: white;
@@ -45,6 +44,7 @@
 	main{
 	text-align:center;
 	justify-content:center;
+        align-items: center;
 	}
         a{
             text-decoration: none;
@@ -53,13 +53,13 @@
         
         table{
             border-collapse: collapse;
-            width: 100%;
             border-width: 4px;
         }
         
         td{
             padding: 10px;
             border-width: 4px;
+            border-color: black;
         }
         
         #encabezado{
@@ -76,7 +76,7 @@
         }
         
         tr{
-            height: 80px;
+            height: 20px;
         }
 
     </style>
@@ -97,10 +97,137 @@
          * 
          */
 
-        foreach ($GLOBALS as $vGlobal => $vValor){
-            echo '<span style="color:red;">'.'Contenido de la variable '.$vGlobal.': '.'</span>'."<br>";
-            echo '<pre>' . print_r($vValor, true) . '</pre>';
-        }
+
+                echo '<h3>Contenido de la variable $_SERVER</h3><br>';
+                echo "<table border 2px>";
+                echo "<tr style='background-color:salmon;'><th>Variable</th><th>Valor</th></tr>";
+                if (!empty($_SERVER)) {
+                    foreach ($_SERVER as $variable => $resultado) {
+                        echo "<tr'>";
+                        echo '<td style="background-color:lightblue;">$_SERVER[' . $variable . ']</td>';
+                        echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='2'>La variable \$_SERVER está vacía.</td></tr>";
+                }
+                echo "</table>";
+
+
+                        echo '<br><br><h3>Contenido de la variable $_GET</h3><br>';
+                        echo '<table>';
+                        echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                        if (!empty($_GET)) {
+                            foreach ($_GET as $variable => $resultado) {
+                                echo "<tr>";
+                                echo '<td>$_GET[' . $variable . ']</td>';
+                                echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                                echo "</tr><br><br>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='2'>La variable \$_GET está vacía.</td></tr>";
+                        }
+                        echo "</table>";
+
+
+                        echo '<br><br><h3>Contenido de la variable $_POST</h3><br>';
+                        echo '<table>';
+                        echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                        if (!empty($_POST)) {
+                            foreach ($_POST as $variable => $resultado) {
+                                echo "<tr>";
+                                echo '<td>$_POST[' . $variable . ']</td>';
+                                echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='2'>La variable \$_POST está vacía.</td></tr>";
+                        }
+                        echo "</table>";
+
+
+                    echo '<br><br><h3>Contenido de la variable $_FILES</h3><br>';
+                    echo '<table>';
+                    echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                    if (!empty($_FILES)) {
+                        foreach ($_FILES as $variable => $resultado) {
+                            echo "<tr>";
+                            echo '<td>$_FILES[' . $variable . ']</td>';
+                            echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='2'>La variable \$_FILES está vacía.</td></tr>";
+                    }
+                    echo "</table>";
+
+
+                echo '<br><br><h3>Contenido de la variable $_COOKIE</h3><br>';
+                echo '<table>';
+                echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                if (!empty($_COOKIE)) {
+                    foreach ($_COOKIE as $variable => $resultado) {
+                        echo "<tr>";
+                        echo '<td>$_COOKIE[' . $variable . ']</td>';
+                        echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='2'>La variable \$_COOKIE está vacía.</td></tr>";
+                }
+                echo "</table>";
+
+
+                        echo '<br><br><h3>Contenido de la variable $_SESSION</h3><br>';
+                        echo '<table>';
+                        echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                        if (!empty($_SESSION)) {
+                            foreach ($_SESSION as $variable => $resultado) {
+                                echo "<tr>";
+                                echo '<td>$_SESSION[' . $variable . ']</td>';
+                                echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='2'>La variable \$_SESSION está vacía.</td></tr>";
+                        }
+                        echo "</table>";
+
+                
+                
+                    echo '<br><br><h3>Contenido de la variable $_REQUEST</h3><br>';
+                    echo '<table>';
+                    echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                    if (!empty($_REQUEST)) {
+                        foreach ($_REQUEST as $variable => $resultado) {
+                            echo "<tr>";
+                            echo '<td>$_REQUEST[' . $variable . ']</td>';
+                            echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                            echo "</tr><br><br>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='2'>La variable \$_REQUEST está vacía.</td></tr>";
+                    }
+                    echo "</table>";
+
+
+                
+                
+                    echo '<br><br><h3>Contenido de la variable $_ENV</h3><br>';
+                    echo '<table>';
+                    echo '<tr><th>Variable</th><th>Valor</th></tr>';
+                    if (!empty($_ENV)) {
+                        foreach ($_ENV as $variable => $resultado) {
+                            echo "<tr>";
+                            echo '<td>$_ENV[' . $variable . ']</td>';
+                            echo "<td><pre>" . print_r($resultado, true) . "</pre></td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='2'>La variable \$_ENV está vacía.</td></tr>";
+                    }
+                    echo "</table><br><br>";
+        
         ?>
         
     </main>

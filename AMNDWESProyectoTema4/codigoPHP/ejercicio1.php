@@ -42,10 +42,6 @@
             left: 0;
             width: 100%;
         }
-	main{
-	text-align:center;
-	justify-content:center;
-	}
         a{
             text-decoration: none;
             color:purple;
@@ -84,6 +80,7 @@
 <body>
     <header>
         <h1><b>UT4: TÉCNICAS DE ACCESO A DATOS EN PHP</b></h1>
+        <h4><a href="../../AMNDWESProyectoDWES/indexProyectoDWES.php">Alberto Méndez Núñez | 03/10/2025</a></h4>
         <p>Curso 2025/2026 - Grupo DAW2</p>
     </header>
     <main>
@@ -97,19 +94,87 @@
          * (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.
             Utilizar excepciones automáticas siempre que sea posible en todos los ejercicios.
          */
-        $ruta='mysql:host=10.199.9.104;dbname=DBAMNDWESProyectoTema4';
-        $usuario='userAMNDWESProyectoTema4';
-        $pass='paso';
         
-            $miDB=new PDO($ruta,$usuario,$pass);
+        require_once '../config/confDBPDO.php';
+        
+        $aAtributos=array(
+            'ATTR_AUTOCOMMIT',
+            'ATTR_CASE',
+            'ATTR_CLIENT_VERSION',
+            'ATTR_CONNECTION_STATUS',
+            'ATTR_DRIVER_NAME',
+            'ATTR_ERRMODE',
+            'ATTR_ORACLE_NULLS',
+            'ATTR_PERSISTENT',
+            'ATTR_SERVER_INFO',
+            'ATTR_SERVER_VERSION',
+            'ATTR_DEFAULT_FETCH_MODE'
+        );
+        
+        try{
+            $miDB=new PDO(ruta,usuario,pass);
             
-            unset($miDB);
+                echo "<h2>Conexión completada correctamente</h2>";
+                echo "<h4>Atributos de la conexión:</h4>";
+            
+                foreach ($aAtributos as $atributo){
+                    print "<b>Atributo '$atributo': </b>".$miDB->getAttribute(constant("PDO::$atributo"))."<br>";
+                }
+                
+        }catch(PDOException $ex){
+            echo "Error de conexión a la base de datos: ".$ex->getMessage();
+            echo "Codigo de error: ".$ex->getCode();
+        }
+        
+        
+        
+        
+        echo "<h2>Conexión erronea por error al encontrar el driver</h2>";
+        const ruta2='error:host=10.199.9.104;dbname=DBAMNDWESProyectoTema4';
+        const usuario2='userAMNDWESProyectoTema4';
+        const pass2='paso';
+        try{
+            $miDB=new PDO(ruta2,usuario2,pass2);
+            
+                echo "<h2>Conexión completada correctamente</h2>";
+                echo "<h4>Atributos de la conexión:</h4>";
+            
+                foreach ($aAtributos as $atributo){
+                    print "<b>Atributo '$atributo': </b>".$miDB->getAttribute(constant("PDO::$atributo"))."<br>";
+                }
+            
+
+        } catch (Exception $ex) {
+            echo "Error ".$ex->getMessage()."<br><br>";
+            echo "Codigo de error: ".$ex->getCode();
+        }
+        
+        
+        echo "<h2>Conexión erronea por contraseña incorrecta</h2>";
+        const ruta3='mysql:host=10.199.9.104;dbname=DBAMNDWESProyectoTema4';
+        const usuario3='userAMNDWESProyectoTema4';
+        const pass3='gdfsghsdfg';
+        try{
+
+            $miDB=new PDO(ruta3,usuario3,pass3);
+            
+                        
+                echo "<h2>Conexión completada correctamente</h2>";
+                echo "<h4>Atributos de la conexión:</h4>";
+            
+                foreach ($aAtributos as $atributo){
+                    print "<b>Atributo '$atributo': </b>".$miDB->getAttribute(constant("PDO::$atributo"))."<br>";
+                }
+           
+        }
+        catch(PDOException $ex){
+            echo "Password incorrecto: ".$ex->getMessage();
+            echo "Codigo de error: ".$ex->getCode();
+        }
+        
+        unset($miDB);
         ?>
         
     </main>
-
-    <footer>
-        <h4><a href="../../AMNDWESProyectoDWES/indexProyectoDWES.php">Alberto Méndez Núñez | 03/10/2025</a></h4>
-    </footer>
 </body>
 </html>

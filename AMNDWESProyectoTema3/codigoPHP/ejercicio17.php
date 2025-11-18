@@ -121,63 +121,79 @@
         
         echo "<table>";
         
-        foreach ($matriz as $fila){
+        echo "<tr><th></th>";
+        for ($j = 0; $j < $asientos; $j++) {
+            echo "<th style='border:1px solid black; width:50px; background-color:#ccc;'>C" . ($j+1) . "</th>";
+        }
+        echo "</tr>";
+
+        foreach ($matriz as $i => $fila) {
             echo "<tr>";
-            foreach ($fila as $nombre){
-                if($nombre!=""){
-                    echo "<td style='border:1px solid black; background-color:red; width:50px;'>";
-                    echo $nombre;
+            echo "<th style='border:1px solid black; background-color:#ccc;'>F" . ($i+1) . "</th>";
+            foreach ($fila as $nombre) {
+                if ($nombre != "") {
+                    echo "<td style='border:1px solid black; background-color:red; width:50px;'>$nombre</td>";
+                } else {
+                    echo "<td style='border:1px solid black; background-color:green; width:50px;'></td>";
                 }
-                else{
-                    echo "<td style='border:1px solid black; background-color:green;'></td>";
-                }
-                echo "</td>";
             }
             echo "</tr>";
-        }
-        echo "</table>";
+        }   
+       echo "</table>";
         
+       
+       
         echo "<br><span style='color:red;'>"."Array recorrida con while():"."</span><br><br>";
         
         $i=0;
         echo "<table>";
-        while($i<$filas){
-            echo "<tr>";
-            $j=0;
-              while($j<$asientos){
-                  if($matriz[$i][$j]!=""){
-                     echo "<td style='border:1px solid black; background-color:red; width:50px;'>";
-                     echo $matriz[$i][$j];
-                  }
-                  else{
-                    echo "<td style='border:1px solid black; background-color:green;'></td>";
+        echo "<tr><th></th>";
+            for ($j = 0; $j < $asientos; $j++) {
+                echo "<th style='border:1px solid black; width:50px; background-color:#ccc;'>C" . ($j+1) . "</th>";
+            }
+            echo "</tr>";
+
+            while ($i < $filas) {
+                echo "<tr>";
+                echo "<th style='border:1px solid black; background-color:#ccc;'>F" . ($i+1) . "</th>";
+
+                $j = 0;
+                while ($j < $asientos) {
+                    if ($matriz[$i][$j] != "") {
+                        echo "<td style='border:1px solid black; background-color:red; width:50px;'>" . $matriz[$i][$j] . "</td>";
+                    } else {
+                        echo "<td style='border:1px solid black; background-color:green; width:50px;'></td>";
+                    }
+                    $j++;
                 }
-                echo "</td>";
-                  $j++;
-              }
-              echo "</tr>";
-              $i++;
-        }
+                echo "</tr>";
+                $i++;
+            }
         echo "</table>";
         
         
         echo "<br><span style='color:red;'>"."Array recorrida con for():"."</span><br><br>";
         
         echo "<table>";
-        for($i=0;$i<$filas;$i++){
-            echo "<tr>";
-            for($j=0;$j<$asientos;$j++){
-                if($matriz[$i][$j]!=""){
-                    echo "<td style='border:1px solid black; background-color:red; width:50px;'>";
-                    echo $matriz[$i][$j];
-                }
-                else{
-                    echo "<td style='border:1px solid black; background-color:green;'></td>";
-                }
-                echo "</td>";
+        echo "<tr><th></th>";
+            for ($j = 0; $j < $asientos; $j++) {
+                echo "<th style='border:1px solid black; width:50px; background-color:#ccc;'>C" . ($j+1) . "</th>";
             }
             echo "</tr>";
-        }
+
+            for ($i = 0; $i < $filas; $i++) {
+                echo "<tr>";
+                echo "<th style='border:1px solid black; background-color:#ccc;'>F" . ($i+1) . "</th>";
+
+                for ($j = 0; $j < $asientos; $j++) {
+                    if ($matriz[$i][$j] != "") {
+                        echo "<td style='border:1px solid black; background-color:red; width:50px;'>" . $matriz[$i][$j] . "</td>";
+                    } else {
+                        echo "<td style='border:1px solid black; background-color:green; width:50px;'></td>";
+                    }
+                }
+                echo "</tr>";
+            }
         echo "</table>";
         ?>
         
