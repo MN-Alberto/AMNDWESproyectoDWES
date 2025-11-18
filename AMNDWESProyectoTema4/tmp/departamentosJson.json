@@ -1,0 +1,22 @@
+[
+    {
+        "T02_CodDepartamento": "AUT",
+        "T02_DescDepartamento": "Departamento de automocion."
+    },
+    {
+        "T02_CodDepartamento": "ELE",
+        "T02_DescDepartamento": "Departamento de electricidad."
+    },
+    {
+        "T02_CodDepartamento": "INF",
+        "T02_DescDepartamento": "Departamento de informatica."
+    },
+    {
+        "T02_CodDepartamento": "ING",
+        "T02_DescDepartamento": "Departamento de ingles."
+    },
+    {
+        "T02_CodDepartamento": "MAT",
+        "T02_DescDepartamento": "Departamento de matematicas."
+    }
+]

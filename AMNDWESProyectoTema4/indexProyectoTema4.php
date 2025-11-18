@@ -105,11 +105,11 @@
                 <td>1</td>
                 <td>(ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.
                     Utilizar excepciones automáticas siempre que sea posible en todos los ejercicios.</td>
-                <td>
+                <td class="codigos">
                     <p><a href="codigoPHP/ejercicio1.php">Ejecutar</a></p>
-                    <p>Mostrar</p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio1.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -118,11 +118,11 @@
                         <tr>
                 <td>2</td>
                 <td>Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio2.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio2.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -132,11 +132,11 @@
                 <td>3</td>
                 <td>Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                 control de errores.</td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio3.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio3.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -147,11 +147,11 @@
                 <td>Formulario de búsqueda de departamentos por descripción (por una parte del campo
                 DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
                 </td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio4.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio4.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -163,11 +163,11 @@
                 <td> Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
                     insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.
                     </td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio5.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio5.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -179,11 +179,11 @@
                 utilizando una consulta preparada. (Después de programar y entender este ejercicio, modificar los
                 ejercicios anteriores para que utilicen consultas preparadas). Probar consultas preparadas sin bind,
                 pasando los parámetros en un array a execute.</td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio6.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio6.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -194,11 +194,11 @@
                 <td>Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
                 Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
                 directorio .../tmp/ del servidor.</td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio7.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio7.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
@@ -212,40 +212,40 @@
                 Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML, JSON, CSV, TXT,...
                 Si el alumno dispone de tiempo probar a exportar e importar a o desde un directorio (a elegir) en el equipo cliente.
                 Si el alumno dispone de tiempo probar importación parcial con log de errores.</td>
-                <td>
-                    <p>Ejecutar</p>
-                    <p>Mostrar</p>
+                <td class="codigos">
+                    <p><a href="codigoPHP/ejercicio8.php">Ejecutar</a></p>
+                    <p><a href="mostrarCodigo/mostrarEjercicio8.php">Mostrar</a></p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
             </tr>
             
-                                    <tr>
+            <tr>
                 <td>9</td>
                 <td>Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
                 GIT)
                 </td>
-                <td>
+                <td class="codigos">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
             </tr>
             
-                                    <tr>
+            <tr>
                 <td>10</td>
                 <td>Aplicación resumen MtoDeDepartamentos POO y multicapa.
                 </td>
-                <td>
+                <td class="codigos">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
-                <td>
+                <td class="mostrar">
                     <p>Ejecutar</p>
                     <p>Mostrar</p>
                 </td>
