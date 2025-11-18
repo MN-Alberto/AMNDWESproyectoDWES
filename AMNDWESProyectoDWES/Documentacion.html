@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentacion</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="cfgs-desarrollo-de-aplicaciones-web">CFGS Desarrollo de Aplicaciones Web</h1>
+<ul>
+<li>
+<p><a href="#cfgs-desarrollo-de-aplicaciones-web">CFGS Desarrollo de Aplicaciones Web</a></p>
+</li>
+<li>
+<p><a href="#1-entorno-de-desarrollo">1. Entorno de Desarrollo</a></p>
+</li>
+<li>
+<p><a href="#11-ubuntu-server-24043-lts">1.1 Ubuntu Server 24.04.3 LTS</a></p>
+</li>
+<li>
+<p><a href="#111-configuraci%C3%B3n-inicial">1.1.1 <strong>Configuración inicial</strong></a></p>
+</li>
+<li>
+<p><a href="#nombre-y-configuraic%C3%B3n-de-red">Nombre y configuraicón de red</a></p>
+</li>
+<li>
+<p><a href="#comandos-de-comprobaci%C3%B3n">Comandos de comprobación:</a></p>
+</li>
+<li>
+<p><a href="#actualizar-el-sistema"><strong>Actualizar el sistema</strong></a></p>
+</li>
+<li>
+<p><a href="#configuraci%C3%B3n-fecha-y-hora"><strong>Configuración fecha y hora</strong></a></p>
+</li>
+<li>
+<p><a href="#cuentas-administradoras"><strong>Cuentas administradoras</strong></a></p>
+</li>
+<li>
+<p><a href="#cuentas-no-administradoras"><strong>Cuentas no administradoras</strong></a></p>
+</li>
+<li>
+<p><a href="#comprobar-cuentas"><strong>Comprobar cuentas:</strong></a></p>
+</li>
+<li>
+<p><a href="#habilitar-cortafuegos"><strong>Habilitar cortafuegos</strong></a></p>
+</li>
+<li>
+<p><a href="#112-instalaci%C3%B3n-del-servidor-web">1.1.2 Instalación del servidor web</a></p>
+</li>
+<li>
+<p><a href="#instalaci%C3%B3n">Instalación</a></p>
+</li>
+<li>
+<p><a href="#verficaci%C3%B3n-del-servicio">Verficación del servicio</a></p>
+</li>
+<li>
+<p><a href="#ficheros-log">Ficheros log</a></p>
+</li>
+<li>
+<p><a href="#comprobaci%C3%B3n-del-servidor">Comprobación del servidor</a></p>
+</li>
+<li>
+<p><a href="#http-a-https-server">HTTP a HTTPS Server</a></p>
+</li>
+<li>
+<p><a href="#redirecci%C3%B3n-de-http-a-https-server">Redirección de HTTP a HTTPS Server</a></p>
+</li>
+<li>
+<p><a href="#virtual-hosts">Virtual Hosts</a></p>
+</li>
+<li>
+<p><a href="#permisos-y-usuarios">Permisos y usuarios</a></p>
+</li>
+<li>
+<p><a href="#enjaular-un-usuario">Enjaular un usuario</a></p>
+</li>
+<li>
+<p><a href="#113-php83-fpm">1.1.3 PHP8.3-fpm</a></p>
+</li>
+<li>
+<p><a href="#instalaci%C3%B3n-1">Instalación</a></p>
+</li>
+<li>
+<p><a href="#verificaci%C3%B3n-del-servicio">Verificación del servicio</a></p>
+</li>
+<li>
+<p><a href="#comprobaci%C3%B3n-del-servidor-1">Comprobación del servidor</a></p>
+</li>
+<li>
+<p><a href="#114-mariadb">1.1.4 MariaDB</a></p>
+</li>
+<li>
+<p><a href="#instalaci%C3%B3n-2">Instalación</a></p>
+</li>
+<li>
+<p><a href="#m%C3%B3dulos-relacionados-con-php">Módulos relacionados con PHP</a></p>
+</li>
+<li>
+<p><a href="#comprobaci%C3%B3n-desde-netbeans">Comprobación desde NetBeans</a></p>
+</li>
+<li>
+<p><a href="#115-xdebug">1.1.5 XDebug</a></p>
+</li>
+<li>
+<p><a href="#116-dns">1.1.6 DNS</a></p>
+</li>
+<li>
+<p><a href="#117-sftp">1.1.7 SFTP</a></p>
+</li>
+<li>
+<p><a href="#118-apache-tomcat">1.1.8 Apache Tomcat</a></p>
+</li>
+<li>
+<p><a href="#119-ldap">1.1.9 LDAP</a></p>
+</li>
+<li>
+<p><a href="#12-windows-11">1.2 Windows 11</a></p>
+</li>
+<li>
+<p><a href="#121-configuraci%C3%B3n-inicial">1.2.1 <strong>Configuración inicial</strong></a></p>
+</li>
+<li>
+<p><a href="#nombre-y-configuraci%C3%B3n-de-red"><strong>Nombre y configuración de red</strong></a></p>
+</li>
+<li>
+<p><a href="#cuentas-administradoras-1"><strong>Cuentas administradoras</strong></a></p>
+</li>
+<li>
+<p><a href="#122-navegadores">1.2.2 <strong>Navegadores</strong></a></p>
+</li>
+<li>
+<p><a href="#123-mobaxterm">1.2.3 <strong>MobaXterm</strong></a></p>
+</li>
+<li>
+<p><a href="#124-netbeans">1.2.4 <strong>Netbeans</strong></a></p>
+</li>
+<li>
+<p><a href="#creaci%C3%B3n-de-proyectos">Creación de proyectos</a></p>
+</li>
+<li>
+<p><a href="#configuraci%C3%B3n-de-git-en-netbeans">Configuración de Git en NetBeans</a></p>
+</li>
+<li>
+<p><a href="#125-visual-studio-code">1.2.5 <strong>Visual Studio Code</strong></a></p>
+</li>
+<li>
+<p><a href="#2-github">2. GitHub</a></p>
+</li>
+<li>
+<p><a href="#3entorno-de-explotaci%C3%B3n">3.Entorno de Explotación</a></p>
+</li>
+</ul>
+<p>| DAW/DWES Tema2 |</p>
+<p>|:-----------:|</p>
+<p>|<img src="images/portada.jpg" alt="Alt">|</p>
+<p>| INSTALACIÓN, CONFIGURACIÓN Y DOCUMENTACIÓN DE ENTORNO DE DESARROLLO Y DEL ENTORNO DE EXPLOTACIÓN |</p>
+<h2 id="entorno-de-desarrollo">1. Entorno de Desarrollo</h2>
+<h3 id="ubuntu-server-24.04.3-lts">1.1 Ubuntu Server 24.04.3 LTS</h3>
+<p>Este documento es una guía detallada del proceso de instalación y configuración de un servidor de aplicaciones en Ubuntu Server utilizando Apache, con soporte PHP y MySQL</p>
+<h4 id="configuración-inicial">1.1.1 <strong>Configuración inicial</strong></h4>
+<h5 id="nombre-y-configuraicón-de-red">Nombre y configuraicón de red</h5>
+<blockquote>
+<p><strong>Nombre de la máquina</strong>: daw-used\</p>
+</blockquote>
+<blockquote>
+<p><strong>Memoria RAM</strong>: 2G\</p>
+</blockquote>
+<blockquote>
+<p><strong>Particiones</strong>: 150G(/) | 350G (/var)\</p>
+</blockquote>
+<blockquote>
+<p><strong>Configuración de red interface</strong>: enp0s3 \</p>
+</blockquote>
+<blockquote>
+<p><strong>Dirección IP</strong> 10.199.9.104/22\</p>
+</blockquote>
+<blockquote>
+<p><strong>GW</strong>: 10.199.8.1/22\</p>
+</blockquote>
+<blockquote>
+<p><strong>DNS</strong>: 10.151.123.21</p>
+</blockquote>
+<blockquote>
+<p>10.151.126.21</p>
+</blockquote>
+<h4 id="comandos-de-comprobación">Comandos de comprobación:</h4>
+<blockquote>
+<p><strong>Nombre de la máquina</strong>: hostnamectl\</p>
+</blockquote>
+<blockquote>
+<p><strong>Memoria RAM</strong>: free -h\</p>
+</blockquote>
+<blockquote>
+<p><strong>Particiones</strong>: df -h\</p>
+</blockquote>
+<blockquote>
+<p><strong>Configuración de red interface</strong>: ip a\</p>
+</blockquote>
+<blockquote>
+<p><strong>Dirección IP</strong> ip a\</p>
+</blockquote>
+<blockquote>
+<p><strong>GW</strong>: ip r\</p>
+</blockquote>
+<blockquote>
+<p><strong>DNS</strong>: resolvectl</p>
+</blockquote>
+<p>Editar el fichero de configuración del interface de red <strong>/etc/netplan</strong>,</p>
+<pre class=" language-bash"><code class="prism  language-bash">
+  
+
+<span class="token comment"># This is the network config written by 'subiquity'</span>
+
+network:
+
+ethernets:
+
+enp0s3:
+
+addresses:
+
+- 10.199.9.104/22
+
+nameservers:
+
+addresses:
+
+- 10.151.123.21
+
+- 10.151.126.21
+
+search: <span class="token punctuation">[</span>educa.jcyl.es<span class="token punctuation">]</span>
+
+routes:
+
+- to: default
+
+via: 10.199.8.1
+
+version: 2
+
+</code></pre>
+<p>Aplicamos la configuración de red con:</p>
+<pre><code>
+sudo netplan apply
+
+</code></pre>
+<h5 id="actualizar-el-sistema"><strong>Actualizar el sistema</strong></h5>
+<pre class=" language-bash"><code class="prism  language-bash">
+<span class="token function">sudo</span> apt update
+
+<span class="token function">sudo</span> apt upgrade
+
+</code></pre>
+<h5 id="configuración-fecha-y-hora"><strong>Configuración fecha y hora</strong></h5>
+<p><a href="https://somebooks.es/establecer-la-fecha-hora-y-zona-horaria-en-la-terminal-de-ubuntu-20-04-lts/" title="Cambiar fecha y hora">Establecer fecha, hora y zona horaria</a></p>
+<pre><code>
+sudo timedatectl set-timezone Europe/Madrid
+
+</code></pre>
+<h5 id="cuentas-administradoras"><strong>Cuentas administradoras</strong></h5>
+<blockquote>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="true" disabled=""> root(inicio)</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="true" disabled=""> miadmin/paso</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="true" disabled=""> miadmin2/paso</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="true" disabled=""> adminsql/paso</li>
+</ul>
+</blockquote>
+<h5 id="cuentas-no-administradoras"><strong>Cuentas no administradoras</strong></h5>
+<blockquote>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="true" disabled=""> operadorweb/paso</li>
+</ul>
+</blockquote>
+<h5 id="comprobar-cuentas"><strong>Comprobar cuentas:</strong></h5>
+<pre><code>
+cat /etc/passwd | grep nombreCuenta
+
+  
+
+id nombreCuenta
+
+  
+
+groups nombreCuenta
+
+  
+
+sudo useradd -m -G [grupos,grupos] -s /bin/bash miadmin3
+
+</code></pre>
+<h5 id="habilitar-cortafuegos"><strong>Habilitar cortafuegos</strong></h5>
+<p>Como activar cortafuegos</p>
+<pre><code>
+sudo ufw enable
+
+</code></pre>
+<p>Abrir el puerto del ssh(22)</p>
+<pre><code>
+sudo ufw allow 22
+
+</code></pre>
+<p>Comprobamos el estado del cortafuegos y puertos</p>
+<pre><code>
+sudo ufw status
+
+</code></pre>
+<p>Para borrar el puerto v6</p>
+<pre><code>
+sudo ufw status numbered
+
+  
+
+sudo ufw delete [numeroRegla]
+
+</code></pre>
+<h4 id="instalación-del-servidor-web">1.1.2 Instalación del servidor web</h4>
+<h5 id="instalación">Instalación</h5>
+<pre><code>
+sudo apt install apache2
+
+</code></pre>
+<h5 id="verficación-del-servicio">Verficación del servicio</h5>
+<pre><code>
+sudo service apache2 start
+
+sudo systemctl status apache2
+
+sudo ufw allow 80
+
+</code></pre>
+<h5 id="ficheros-log">Ficheros log</h5>
+<p>Los ficheros de log de apache se almacenan en “/var/log/apache2”.</p>
+<h5 id="comprobación-del-servidor">Comprobación del servidor</h5>
+<p><img src="images/8.PNG" alt="alt text"></p>
+<h4 id="http-a-https-server">HTTP a HTTPS Server</h4>
+<p>Así funciona HTTPS:</p>
+<p><img src="images/imagenhttps.png" alt="alt text"></p>
+<p>En primer lugar habilitamos el modulo “ssl”</p>
+<pre><code>
+sudo a2enmod ssl
+
+</code></pre>
+<p>Después crearemos el certificado autofirmado:</p>
+<pre><code>
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private amn-used.key -out /etc/ssl/certs/amn-used.crt
+
+</code></pre>
+<p>Comprobamos que se ha creado correctamente con:</p>
+<pre><code>
+sudo ls /etc/ssl/certs | grep amn-used
+
+  
+
+sudo ls /etc/ssl/private | grep amn-used
+
+</code></pre>
+<p>Reiniciamos el servicio de apache:</p>
+<pre><code>
+sudo systemctl restart apache2
+
+</code></pre>
+<p>Nos dirigiremos al directorio “/etc/apache2/sistes-available” y haremos una copia del fichero “default-ssl.conf”</p>
+<pre><code>
+sudo cp default-ssl.conf amn-used.conf
+
+</code></pre>
+<p>Dentro de la copia cambiaremos el nombre del certificado y de la clave por los que indicamos al crearlo:</p>
+<p><img src="images/htps.PNG" alt="alt text"></p>
+<p>Después activaremos el nuevo sitio:</p>
+<pre><code>
+sudo a2ensite amn-used.conf
+
+</code></pre>
+<p>Reiniciamos el servicio de apache:</p>
+<pre><code>
+sudo systemctl restart apache2
+
+</code></pre>
+<p>Y por último habilitaremos el puerto 443 en el cortafuegos:</p>
+<pre><code>
+sudo ufw allow 443
+
+</code></pre>
+<p>Comprobamos:</p>
+<p><img src="images/certPrueba.PNG" alt="alt text"></p>
+<h4 id="redirección-de-http-a-https-server">Redirección de HTTP a HTTPS Server</h4>
+<p>Para redireccionar apache HTTP a HTTPS deberemos de habilitar el módulo “rewrite” y editar el fichero “.htaccess” del directorio raíz de publicación y añadiremos las siguientes directivas.</p>
+<p>En primer lugar habilitaremos el módulo “rewrite”:</p>
+<pre><code>
+sudo a2enmod rewrite
+
+</code></pre>
+<p>Después reiniciaremos apache:</p>
+<pre><code>
+sudo systemctl restart apache2
+
+</code></pre>
+<p>A continuación en el fichero “.htaccess” del raíz de publicación podremos las siguientes directivas:</p>
+<p><img src="images/htaccessRedireccion.PNG" alt="alt text"></p>
+<p>Y al finalizar reiniciaremos de nuevo apache y podremos comprobar que al acceder a la URL mediante http el servidor redirecciona automaticamente a https.</p>
+<h5 id="virtual-hosts">Virtual Hosts</h5>
+<h5 id="permisos-y-usuarios">Permisos y usuarios</h5>
+<p>Creamos una cuenta para la publicación de contenidos en nuestra web:</p>
+<pre><code>
+sudo adduser --home /var/www/html --ingroup www-data --shell /bin/bash operadorweb
+
+  
+
+sudo chown -R operadorweb:www-data /var/www/html
+
+  
+
+sudo chmod -R 775 /var/www/html
+
+</code></pre>
+<h5 id="enjaular-un-usuario">Enjaular un usuario</h5>
+<p>Vamos a enjaular el usuario “usuarioEnjaulado1” en el directorio “/var/www/usuarioEnjaulado1”.</p>
+<p>Para ello, en primer lugar, deberemos de crear ungrupo en el que vamos a meter los usuarios que queramos enjaular:</p>
+<pre><code>
+sudo addgroup sftpusers
+
+</code></pre>
+<p><img src="images/enjaular/1.png" alt="alt text"></p>
+<p>A continuación crearemos el usuario “usuarioEnjaulado1”, haciendo que pertenezca a los grupos “www-data” y “sftpusers”, además haremos que el home del usuario sea “/var/www/usuarioEnjaulado1”:</p>
+<p><img src="images/enjaular/2.PNG" alt="alt text"></p>
+<p>Después cambiaremos el propietario del directorio “/var/www/usuarioEnjaulado1” a “root” y cambiaremos los permisos a solo lectura:</p>
+<p><img src="images/enjaular/3.PNG" alt="alt text"></p>
+<p>Crearemos la carpeta “htdocs” en “/var/www/usuarioEnjaulado1” y cambiaremos los permisos de la carpeta y su propietario que ahora será “usuarioEnjaulado1”:</p>
+<p><img src="images/enjaular/4.PNG" alt="alt text"></p>
+<p>A continuación nos dirigiremos al directorio “/etc/ssh” y haremos una copia de seguridad del fichero “sshd_config” y editaremos el fichero existente, no la copia:</p>
+<p><img src="images/enjaular/5.PNG" alt="alt text"></p>
+<p><img src="images/enjaular/6.PNG" alt="alt text"></p>
+<p>Reiniciaremos el servicio:</p>
+<pre><code>
+sudo service ssh restart
+
+</code></pre>
+<p>Por ultimo nos conectaremos mediante sftp y el usuario “usuarioEnjaulado1” y comprobaremos que el usuario no puede moverse de el directorio indicado:</p>
+<p><img src="images/enjaular/7.PNG" alt="alt text"></p>
+<h4 id="php8.3-fpm">1.1.3 PHP8.3-fpm</h4>
+<h5 id="instalación-1">Instalación</h5>
+<pre><code>
+  
+
+sudo apt install php8.3-fpm php8.3 -y
+
+  
+
+sudo a2enmod mpm_event proxy_fcgi
+
+</code></pre>
+<p>Configuramos el sitio activo:</p>
+<pre><code>
+cd /etc/apache2/sites-enabled/
+
+  
+
+sudo nano 000-default.conf
+
+  
+
+ProxyPassMatch ^/(.*\.php)$ unix:/run/php/php8.3-fpm.sock|fcgi://127.0.0.1/var/www/html
+
+</code></pre>
+<h5 id="verificación-del-servicio">Verificación del servicio</h5>
+<pre><code>
+sudo service php8.3-fpm status
+
+</code></pre>
+<h5 id="comprobación-del-servidor-1">Comprobación del servidor</h5>
+<p><img src="images/10.PNG" alt="alt text"></p>
+<p><img src="images/9.PNG" alt="alt text"></p>
+<h4 id="mariadb">1.1.4 MariaDB</h4>
+<h4 id="instalación-2">Instalación</h4>
+<p>En primero lugar actualizaremos nuestro servidor con:</p>
+<pre><code>
+sudo apt update
+
+</code></pre>
+<p>Luego instalaremos el servicio “mariadb-server”:</p>
+<pre><code>
+sudo apt install mariadb-server
+
+</code></pre>
+<p>Al instalarlo iniciaremos el servicio:</p>
+<pre><code>
+sudo service mariadb start
+
+</code></pre>
+<p>Y comprobaremos el estado con:</p>
+<pre><code>
+sudo service mariadb status
+
+</code></pre>
+<p>Comprobaremos la version de mariadb con:</p>
+<pre><code>
+sudo mariadb --version
+
+</code></pre>
+<p>Entraremos en el fichero de configuracion de mariaDB y cambiaremos el apartado “bind-address” por “0.0.0.0”:</p>
+<p>sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf</p>
+<p><img src="images/confMariadb.png" alt="alt text"></p>
+<p>Comprobamos el puerto por defecto que utiliza mariaDB (3306):</p>
+<p><img src="images/puertoMariadb.png" alt="alt text"></p>
+<p>A continuacion deberemos de crear un usuario “adminsql” de contraseña “paso”.</p>
+<p>Para ello entraremos en la consola de MariaDB con “sudo mariadb” y los siguientes comandos:</p>
+<p>Creación del usuario:</p>
+<p><img src="images/usuarioSql.png" alt="alt text"></p>
+<p>Configuración de permisos de administrador:</p>
+<p><img src="images/permisosUsuario.png" alt="alt text"></p>
+<p>Mysql tiene un modo de instalación seguro para evitar brechas de seguridad, lo ejecutaremos con “sudo mysql_secure_installation” y responderemos a las preguntas en función de nuestras preferencias:</p>
+<p><img src="images/mysqlSi.png" alt="alt text"></p>
+<p><img src="images/mysqlSi2.png" alt="alt text"></p>
+<p>Una de las preguntas ha sido si queriamos que el usuario “root” tubiera contraseña, lo comprobamos con el siguiente comando:</p>
+<p><img src="images/compRoot.png" alt="alt text"></p>
+<h4 id="módulos-relacionados-con-php">Módulos relacionados con PHP</h4>
+<p>Deberemos de instalar el módulo que integra mysql con php8.3-fpm con:</p>
+<p><img src="images/moduloMysql.png" alt="alt text"></p>
+<p>Comprobaremos que se ha instalado correctamente con:</p>
+<p><img src="images/comprobarModulos.png" alt="alt text"></p>
+<h4 id="comprobación-desde-netbeans">Comprobación desde NetBeans</h4>
+<p>En primer lugar deberemos de ir al apartado de “Services” y hacer clic derecho en “Databases”. Deberemos de entrar en “New Connection…”:</p>
+<p><img src="images/comprobarSql/1.png" alt="alt text"></p>
+<p>A continuación deberemos de elegir el driver que queremos utilizar, en este caso MariaDB (MySQL-compatible) y indicarle el archivo del driver que hemos bajado de internet:</p>
+<p><img src="images/comprobarSql/2.png" alt="alt text"></p>
+<p>Deberemos de indicar la IP de nuestro servidor, el puerto, la base de datos a la que queremos conectarnos, y el usuario y password que hemos creado anteriormente:</p>
+<p><img src="images/comprobarSql/3.png" alt="alt text"></p>
+<p>Como podemos comprobar nos hemos conectado correctamente:</p>
+<p><img src="images/comprobarSql/4.png" alt="alt text"></p>
+<p>Para ejecutar un script deberemos de hacer click derecho en la conexión y entraremos en “Execute Command”:</p>
+<p><img src="images/comprobarSql/5.png" alt="alt text"></p>
+<h4 id="xdebug">1.1.5 XDebug</h4>
+<p><img src="images/xDebug/1.PNG" alt="alt text"></p>
+<p><img src="images/xDebug/2.PNG" alt="alt text"></p>
+<p><img src="images/xDebug/5.PNG" alt="alt text"></p>
+<p><img src="images/xDebug/3.PNG" alt="alt text"></p>
+<p><img src="images/xDebug/4.PNG" alt="alt text"></p>
+<h4 id="dns">1.1.6 DNS</h4>
+<h4 id="sftp">1.1.7 SFTP</h4>
+<h4 id="apache-tomcat">1.1.8 Apache Tomcat</h4>
+<h4 id="ldap">1.1.9 LDAP</h4>
+<h3 id="windows-11">1.2 Windows 11</h3>
+<h4 id="configuración-inicial-1">1.2.1 <strong>Configuración inicial</strong></h4>
+<h5 id="nombre-y-configuración-de-red"><strong>Nombre y configuración de red</strong></h5>
+<h5 id="cuentas-administradoras-1"><strong>Cuentas administradoras</strong></h5>
+<h4 id="navegadores">1.2.2 <strong>Navegadores</strong></h4>
+<h4 id="mobaxterm">1.2.3 <strong>MobaXterm</strong></h4>
+<h4 id="netbeans">1.2.4 <strong>Netbeans</strong></h4>
+<h5 id="creación-de-proyectos">Creación de proyectos</h5>
+<p>Para crear un proyecto en NetBeans deberemos de clicar en “File/New Project”.</p>
+<p><img src="images/1.png" alt="alt text"></p>
+<p>Después clicaremos en la categoría de “PHP” y el tipo “PHP Application from Remote Server”.</p>
+<p><img src="images/2.png" alt="alt text"></p>
+<p>Le daremos un nombre a nuestro proyecto y indicaremos la URL en la que se almacenará el proyecto.</p>
+<p><img src="images/3.png" alt="alt text"></p>
+<p>Indicaremos también la URL con la que buscaremos la página en el navegador (IP dek servidor) y el directorio de publicación.</p>
+<p><img src="images/4.png" alt="alt text"></p>
+<p>Mediante SFTP crearemos un archivo “index.html” dentro del directorio de publicación.</p>
+<p><img src="images/5.png" alt="alt text"></p>
+<p>Confirmaremos los archivos que queramos sincronizar.</p>
+<p><img src="images/6.png" alt="alt text"></p>
+<p>Y comprobaremos que cuando cambiamos algo en NetBeans se ejecutan los cambios en la web del servidor.</p>
+<p><img src="images/7.png" alt="alt text"></p>
+<h5 id="configuración-de-git-en-netbeans">Configuración de Git en NetBeans</h5>
+<p>En primer lugar deberemos de dirigirnos a nuestro repositorio de GitHub y copiaremos la URL del repositorio clicando en “&lt;&gt; Code” y en el apartado HTTPS.</p>
+<p><img src="images/11.png" alt="alt text"></p>
+<p>En NetBeans en el apartado “Team” deberemos de clicar en la opcion de “Git” y en la opción “Clonar…”</p>
+<p><img src="images/12.png" alt="alt text"></p>
+<p>Pegaremos la URL de nuestro repositorio y indicaremos el usuario y la contraseña de la cuenta de GitHub. Tmbién deberemos de indicar la carpeta de destino.</p>
+<p><img src="images/13.png" alt="alt text"></p>
+<p>Podremos a su vez indicar que ramas queremos de las que tiene el repositorio. (Si tubiera más aparecerían aquí).</p>
+<p><img src="images/14.png" alt="alt text"></p>
+<p>Indicaremos el directorio padre y el nombre de la clonacion.</p>
+<p><img src="images/15.png" alt="alt text"></p>
+<p>Al finalizar nos dirá si queremos crear un proyecto a partir del repositorio.</p>
+<p><img src="images/16.png" alt="alt text"></p>
+<p>Indicaremos el tipo de proyecto.</p>
+<p><img src="images/17.png" alt="alt text"></p>
+<p>Le pondremos un nombre y le indicaremos un directorio.</p>
+<p><img src="images/18.png" alt="alt text"></p>
+<p>Indicaremos la URL del servidor y su directorio de publicación.</p>
+<p><img src="images/19.png" alt="alt text"></p>
+<p>Confirmaremos los archivos.</p>
+<p><img src="images/20.png" alt="alt text"></p>
+<p>Y como podemos ver en el Repository Browser tenemos toda la información sobre la clonación.</p>
+<p><img src="images/21.png" alt="alt text"></p>
+<p>Al hacer clic derecho en “Source Files” de nuestro proyecto, en el apartado de “Git” podremos administrar todo, por ejemplo hacer un commit, merge etc.</p>
+<p><img src="images/22.png" alt="alt text"></p>
+<h4 id="visual-studio-code">1.2.5 <strong>Visual Studio Code</strong></h4>
+<h2 id="github">2. GitHub</h2>
+<h2 id="entorno-de-explotación">3.Entorno de Explotación</h2>
+<hr>
+<blockquote>
+<p><strong>Nombre y Apellidos</strong></p>
+</blockquote>
+<blockquote>
+<p>Alberto Méndez Núñez</p>
+</blockquote>
+<blockquote>
+<p>Curso: 2025/2026</p>
+</blockquote>
+<blockquote>
+<p>2º Curso CFGS Desarrollo de Aplicaciones Web</p>
+</blockquote>
+<blockquote>
+<p>Despliegue de aplicaciones web</p>
+</blockquote>
+</div>
+</body>
+
+</html>
